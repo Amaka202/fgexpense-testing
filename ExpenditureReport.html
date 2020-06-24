@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/contact-home.css">
+    <link rel="stylesheet" href="css/expenditurereport.css" />
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Mukta:700|Roboto+Slab&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/8f691340fb.js"
+			crossorigin="anonymous"
+		></script>
+    <title>ExpenseNg</title>
+</head>
+	<div class="containerr">
+	<!-- navbar -->
+	<header>
+		<div class="logo">
+			<img src="img/Group 380.svg" class="logo1" alt="logo" srcset="">
+			<img src="img/Frame 384.svg" class="logo2" alt="logo" srcset="">
+		</div>  
+		   
+				<a href="#"><i class="fa fa-2x fa-bars menu-toggle" id="menu" aria-hidden="true"></i></a>
+				<ul class="nav " id="nav">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="ExpenditureReport.html"class="active">Expenditure Report</a></li>
+				   
+					<li><a href="#">Ministry Info</a>
+						<ul>
+							<li><a href="ministry_expenditure.html"class="">Ministry Report</a></li>
+							<li><a href="ministry profile.html"class="">Ministry Profile Search</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Company Info</a>
+						<ul>
+							<li><a href="companyreport.html"class="">Company Report</a></li>
+							<li><a href="companyprofile.html"class="">Comapny Profile Search</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Reference</a>
+						<ul>
+							<li><a href="quickContacts.html"class="">Government Twitter Handles </a></li>
+							<li><a href="contact.html"class="">Contact Us</a></li>
+							<li><a href="about.html"class="">About Us</a></li>
+						</ul>
+					</li>
+				</ul> 
+			</header>
+    
+		<!-- banner -->
+		<div class="banner-section">
+			<div class="home-banner">Expenditure Report</div>
+			<div class="banner">
+				<h1>Expenditure Report</h1>
+				<p>Explore the amount allocated to every ministry in both graphical
+				and tabular format. Increase your knowledge about how much each
+				ministry gets allocated every month. and how much they spend.</p>
+			</div>
+		</div>
+		</div>
+		<!-- <div class="banner-section">
+			<div class="home-banner">Expenditure Report</div>
+        <div class="hero">
+			<img
+			  class="hero-img"
+			  src="https://user-images.githubusercontent.com/54963460/85075373-012b4a80-b1b6-11ea-88c4-b9ba4cfd22a0.png"
+			/>
+			<div class="hero-text">
+				<h1>Expenditure Report</h1>
+				<p>Explore the amount allocated to every ministry in both graphical
+				and tabular format. Increase your knowledge about how much each
+				ministry gets allocated every month. and how much they spend.</p>
+			</div>
+		  </div>
+         </div>    -->
+	<!-- </div> -->
+			<!-- The chart Begins -->
+			<main class="container">
+				<!-- Chart Header Row -->
+				<div class="row justify-content-center align-items-center" style="margin-top: 30px;">
+					<div class="col-md-10 text-center font-weight-normal">
+						<h3 id="sub-section-header">
+							<b>Graph Representation of Expenditures</b>
+						</h3>
+					</div>
+				</div>
+
+				<!-- Date & Filter Row -->
+				<div class="row" style="margin: 20px auto;">
+					<div class="col-md-3 offset-md-6">
+						<div class="row align-items-center">
+							<!-- Report Date -->
+							<div class="col-md-12 text-right">
+								<b> 20th May, 2020 </b> <button>Filter <i class="fas fa-filter"></i></button>
+							</div>
+							<!-- Filter Button -->
+							
+						</div>
+					</div>
+				</div>
+<div class="row" style="margin-bottom: 30px;">
+<div class="col-md-8">
+			<div class="graph">
+				<div class="colors">
+					<div class="color" style="background-color:black ;"></div>
+					<div class="color" style="background-color: rgb(58, 86, 241);"></div>
+					<div class="color" style="background-color: rgb(0, 206, 221);"></div>
+					<div class="color" style="background-color:rgb(0, 106, 221) ;"></div>
+					<div class="color" style="background-color: darkgreen;"></div>
+					<div class="color" style="background-color:blue ;"></div>
+					<div class="color" style="background-color: red;"></div>
+					<div class="color" style="background-color: darkred;"></div>
+					<div class="color" style="background-color: lightgreen;"></div>
+					<div class="color" style="background-color: rgb(58, 47, 207);"></div>
+					<div class="color" style="background-color: turquoise;"></div>
+					<div class="color" style="background-color: grey;"></div>
+					<span>Months</span>
+				</div>
+				
+				<span class="amount">Amount Awarded (Billions)</span>
+				
+				<div class="graphbody">
+					<div class="graphlines">
+						<div class="graphline"></div>
+						<div class="graphline"></div>
+						<div class="graphline"></div>
+						<div class="graphline"></div>
+						<div class="graphline"></div>
+						<div class="graphline"></div>
+						<div class="graphline"></div>
+						<div class="graphline"></div>
+						<div class="graphline"></div>
+						<div class="graphline"></div>
+						<div class="numbers">
+							<div>10</div>
+							<div>9</div>
+							<div>8</div>
+							<div>7</div>
+							<div>6</div>
+							<div>5</div>
+							<div>4</div>
+							<div>3</div>
+							<div>2</div>
+							<div>1</div>
+						</div>
+					</div>
+					<div class="graphlabel">
+						<span>Highest funds</span>
+						<span>8.7bn</span>
+					</div>
+					<svg width="572" height="359" viewBox="0 0 572 359" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M114.786 38.269L0.733398 52.144V358.48H571.51V52.144L548.956 133.217L499.746 99.4819H416.193L332.64 44.5264L260.876 65.7468L214.5 9L114.786 38.269Z"
+							fill="url(#paint0_linear)" fill-opacity="0.16" />
+						<path
+							d="M1 54.0485L112.5 39.0853L214.5 9.5L261.433 65.4749L332.05 46.7029L418.861 101.386H501.159L550.273 137.026L570.183 55.6808"
+							stroke="#00945E" stroke-width="1.63234" />
+						<ellipse cx="214.765" cy="4.89703" rx="4.76529" ry="4.89703" fill="#338164" />
+						<line x1="214.5" y1="10" x2="214.5" y2="358" stroke="#004A2F" stroke-dasharray="2 2" />
+						<defs>
+							<linearGradient id="paint0_linear" x1="286.122" y1="-1.72339" x2="286.122"
+								y2="358.481" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#00935D" />
+								<stop offset="0.75" stop-color="#00945E" stop-opacity="0" />
+							</linearGradient>
+						</defs>
+					</svg>
+				</div>
+			</div> 
+</div>
+<div class="col-md-1 h-100">
+
+</div>
+		  <div class="col-md-2"> 
+			<div class="row">
+				<div class="col-md-6" style="padding-left: 0px;">
+						<h5 id="sub-section-header">
+							<br>
+							<br>
+							<br>
+							Key
+						</h5>
+				</div>
+				</div>
+				<div class="row">
+					<ul class="list-unstyled align-items-center">
+						<li>
+							<svg width="20" height="20">
+								<rect x="0" y="0" width="25" height="25"
+								style="fill: #1F2430;" />
+							</svg> 
+							  January
+						</li>
+						<li>
+							<svg width="20" height="20">
+								<rect x="0" y="0" width="25" height="25"
+								style="fill: #6765EC;" />
+							</svg> 
+							February
+						</li>
+						<li>
+							<svg width="20" height="20">
+								<rect x="0" y="0" width="25" height="25"
+								style="fill: #42E8E0;" />
+							</svg> 
+							March
+						</li>
+						<li>
+							<svg width="20" height="20">
+								<rect x="0" y="0" width="25" height="25"
+								style="fill: #2196C4;" />
+							</svg> 
+							April
+						</li>
+						<li>
+							<svg width="20" height="20">
+								<rect x="0" y="0" width="25" height="25"
+								style="fill: #005D3B;" />
+							</svg> 
+							May
+						</li>
+						<li>
+							<svg width="20" height="20">
+								<rect x="0" y="0" width="25" height="25"
+								style="fill: #004583;" />
+							</svg> 
+							June
+						</li>
+						<li>
+							<svg width="20" height="20">
+								<rect x="0" y="0" width="25" height="25"
+								style="fill: #FF0000;" />
+							</svg> 
+							July
+						</li>
+						<li>
+							<svg width="20" height="20">
+								<rect x="0" y="0" width="25" height="25"
+								style="fill: #BC0A0A;" />
+							</svg> 
+							August
+						</li>
+						<li>
+							<svg width="20" height="20">
+								<rect x="0" y="0" width="25" height="25"
+								style="fill: #9EFF00;" />
+							</svg> 
+							September
+						</li>
+						<li>
+							<svg width="20" height="20">
+								<rect x="0" y="0" width="25" height="25"
+								style="fill: #423E85;" />
+							</svg> 
+							October
+						</li>
+						<li>
+							<svg width="20" height="20">
+								<rect x="0" y="0" width="25" height="25"
+								style="fill: #71CACE;" />
+							</svg> 
+							November
+						</li>
+						<li>
+							<svg width="20" height="20">
+								<rect x="0" y="0" width="25" height="25"
+								style="fill: #A4A4A4;" />
+							</svg> 
+							December
+						</li>
+					</ul>
+				</div>
+		</div> 
+</div>
+</main>
+
+<br />
+<br />
+<!---TABLE BEGINS--->
+<section class="container">
+	<div class="table-section reponsive-div">
+		<div class="main-table">
+			<div class="table-top">
+				<h3>Daily Expenditure</h3>
+				<h5
+					>20th May, 2020 &nbsp;
+					<button onclick = "show_filter()">Filter <i class="fas fa-filter"></i></button
+				></h5>
+			</div>
+
+			<div class="table-data">
+				<div style="overflow-x: auto;">
+					<table>
+						<thead>
+							<tr>
+								<th>Projects</th>
+								<th>Ministry</th>
+								<th>Company</th>
+								<th>Amount</th>
+								<th>Date</th>
+							</tr>
+						</thead>
+						<tbody class="expenditure-data">
+							<!-- <tr>
+								<td class="profileSummary">Rehabilitation of Lagos</td>
+								<td>Transport</td>
+								<td>Julius Beger</td>
+								<td>₦806,650,320</td>
+								<td>20th May, 2020</td>
+							</tr>
+							<tr>
+								<td class="profileSummary">Building of Class Blocks</td>
+								<td>Education</td>
+								<td>Samsung</td>
+								<td>₦806,650,320</td>
+								<td>20th May, 2020</td>
+							</tr>
+							<tr>
+								<td class="profileSummary">Rehabilitation of Lagos</td>
+								<td>Transport</td>
+								<td>Julius Beger</td>
+								<td>₦806,650,320</td>
+								<td>20th May, 2020</td>
+							</tr>
+							<tr>
+								<td class="profileSummary">Building of Class Blocks</td>
+								<td>Education</td>
+								<td>Samsung</td>
+								<td>₦806,650,320</td>
+								<td>20th May, 2020</td>
+							</tr>
+							<tr>
+								<td class="profileSummary">Rehabilitation of Lagos</td>
+								<td>Transport</td>
+								<td>Julius Beger</td>
+								<td>₦806,650,320</td>
+								<td>20th May, 2020</td>
+							</tr>
+							<tr>
+								<td class="profileSummary">Building of Class Blocks</td>
+								<td>Education</td>
+								<td>Samsung</td>
+								<td>₦806,650,320</td>
+								<td>20th May, 2020</td>
+							</tr>
+							<tr>
+								<td class="profileSummary">Rehabilitation of Lagos</td>
+								<td>Transport</td>
+								<td>Julius Beger</td>
+								<td>₦806,650,320</td>
+								<td>20th May, 2020</td>
+							</tr>
+							<tr>
+								<td class="profileSummary">Building of Class Blocks</td>
+								<td>Education</td>
+								<td>Samsung</td>
+								<td>₦806,650,320</td>
+								<td>20th May, 2020</td>
+							</tr>
+							<tr>
+								<td class="profileSummary">Rehabilitation of Lagos</td>
+								<td>Transport</td>
+								<td>Julius Beger</td>
+								<td>₦806,650,320</td>
+								<td>20th May, 2020</td>
+							</tr>
+							<tr>
+								<td class="profileSummary">Building of Class Blocks</td>
+								<td>Education</td>
+								<td>Samsung</td>
+								<td>₦806,650,320</td>
+								<td>20th May, 2020</td>
+							</tr>
+							<tr>
+								<td class="profileSummary">Rehabilitation of Lagos</td>
+								<td>Transport</td>
+								<td>Julius Beger</td>
+								<td>₦806,650,320</td>
+								<td>20th May, 2020</td>
+							</tr>
+							<tr>
+								<td class="profileSummary">Building of Class Blocks</td>
+								<td>Education</td>
+								<td>Samsung</td>
+								<td>₦806,650,320</td>
+								<td>20th May, 2020</td>
+							</tr>
+							<tr>
+								<td class="profileSummary">Rehabilitation of Lagos</td>
+								<td>Transport</td>
+								<td>Julius Beger</td>
+								<td>₦806,650,320</td>
+								<td>20th May, 2020</td>
+							</tr>
+							<tr>
+								<td class="profileSummary">Building of Class Blocks</td>
+								<td>Education</td>
+								<td>Samsung</td>
+								<td>₦806,650,320</td>
+								<td>20th May, 2020</td>
+							</tr> -->
+						</tbody>
+						
+					</table>
+				</div>
+			</div>
+			<!---PAGINATION--->
+			<div class="table-footer">
+				<span></span>
+				<div class="pagination">
+					<!-- <a id="prev" href="#">&#8249;</a>
+					<a class="active" href="#">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">..</a>
+					<a href="#">6</a>
+					<a id="next" href="#">&#8250;</a> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!---TABLE ENDS--->
+</section>
+<!-----FILTER POPUP-->
+<div id = "filter-screen">
+	<div class = "filter-popup center">
+		<div class = "filter-header">Filter</div>
+		<div class = "filter-subtext">Select Date</div> 
+		<input type="date" id="" name="">
+		<div class = "filter-subtext">View By</div> 
+		<div class = "view-by-selection clearfix">
+			<button class = "view-choice" id = "day" onclick="filterSelectionView('day')">Day</button>
+			<button class = "view-choice" id = "month" onclick="filterSelectionView('month')">Month</button>
+			<button class = "view-choice" id = "year" onclick="filterSelectionView('year')">Year</button>
+		</div>
+		<div class = "filter-subtext">Sort By</div> 
+		<div class = "sort-selection center">
+			<button class = "sort-choice" id = "htl" onclick="filterSelectionSort('htl')">Amount (Highest to Lowest)</button>
+			<button class = "sort-choice" id = "lth" onclick="filterSelectionSort('lth')">Amount (Lowest to Highest)</button>
+		</div>
+		<div class="applyy">
+		<button class="apply-filter center" onclick="apply()">Apply Filter</button></div>
+	</div>
+</div>
+
+<!-- Pop up for project summary -->
+
+<section class="section-wrapper">
+	<div class="section-container">
+		<div class="section-img">
+			<img src="img/Julius-Berger 1.svg" alt="user avatar">
+		</div>
+		<div class="section-write-up">
+			<div class="project-date">
+				<div class="projects">
+					<p class="project small-font">Project</p>
+					<p id="desc" class="project-name big-font">Rehabilitation Of Lagos Ibadan Expressway</p>
+				</div>
+				<div class="dates">
+					<p id="date" class="date big-font">20th, May 2020</p>
+				</div>
+			</div>
+
+			<div class="company-info">
+				<div class="company">
+					<p class="small-font">Contracted Company</p>
+					<p id="company" class="big-font">Julius Berger</p>
+				</div>
+				<div class="company">
+					<p class="small-font">Company CEO</p>
+					<p id="ceo" class="big-font">Julius Berger</p>
+				</div>
+				<div class="company last">
+					<p class="small-font">Company Twitter Handle</p>
+					<p id="coy-handle" class="big-font">@fedmintransport</p>
+				</div>
+			</div>
+
+			<div class="ministry-info">
+				<div class="ministry">
+					<div class="ministry-name">
+						<p class="small-font">Contracting Ministry</p>
+						<p id="ministry" class="big-font">Ministry of Transportation</p>
+					</div>
+					<div class="ministry-name">
+						<p class="small-font">Ministry Twitter Handle</p>
+						<p id="min-handle" class="big-font">@fedmintransport</p>
+					</div>
+				</div>
+				<div class="minister">
+					<div class="minister-name">
+						<p class="small-font">Minister</p>
+						<p id="min-head" class="big-font">Mohammed Musa Bello</p>
+					</div>
+					<div class="minister-name">
+						<p class="small-font">Minister Twitter Handle</p>
+						<p id="min-head-handle"class="big-font">@mohammedbello</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="share-close-buttons">
+				<div class="share-button">
+					<div class="share-close-button">
+						<a href="#" class="share small-font">Share</a>
+						<img src="img/Vector.svg" alt="user avatar">
+					</div>
+				</div>
+				<div class="close-button">
+					<div class="share-close-button">
+						<a href="#" class="share small-font">Close</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Comment -->
+
+<section class="comment-container">
+	<div class="comment-wrapper">
+		<div class="comment-image">
+			<img class="comment-profile-image" src="img/Rectangle 320.svg" alt="user avatar">
+		</div>
+		<div class="writeup-container">
+			<div class="name-time-options">
+				<div class="name-time">
+					<p class="comment-name">James Emmanuel</p>
+					<p class="comment-time">2h ago</p>
+				</div>
+				<div class="comment-option">
+					<img src="img/Group 15.svg" alt="user avatar" class="comment-options active">
+				</div>
+			</div>
+			<div class="comment-write-up">
+				<p class="comment-content">This is so nice to read, I can see the improvement in this sector this is really encouraging.
+					 Kudos !!! 
+				</p>
+			</div>
+			<div class="comment-reactions">
+				<div class="comment-like">
+					<img src="img/upvote.svg" alt="user avatar" class="like-image">
+					<p class="like-number">23</p>
+				</div>
+				<div class="comment-dislike">
+					<img src="img/downvote.svg" alt="user avatar" class="dislike-image">
+					<p class="dislike-number">0</p>
+				</div>
+				<div class="comment-reply">
+					<img src="img/reply.svg" alt="user avatar" class="reply-image">
+					<p class="reply-number">Reply</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="comment-wrapper">
+		<div class="comment-image">
+			<img class="comment-profile-image" src="img/Rectangle 320.svg" alt="user avatar">
+		</div>
+		<div class="writeup-container">
+			<div class="name-time-options">
+				<div class="name-time">
+					<p class="comment-name">James Emmanuel</p>
+					<p class="comment-time">2h ago</p>
+				</div>
+				<div class="comment-option">
+					<img src="img/Group 15.svg" alt="user avatar" class="comment-options">
+				</div>
+			</div>
+			<div class="comment-write-up">
+				<p class="comment-content">This is so nice to read, I can see the improvement in this sector this is really encouraging.
+					 Kudos !!! 
+				</p>
+			</div>
+			<div class="comment-reactions">
+				<div class="comment-like">
+					<img src="img/upvote.svg" alt="user avatar" class="like-image">
+					<p class="like-number">23</p>
+				</div>
+				<div class="comment-dislike">
+					<img src="img/downvote.svg" alt="user avatar" class="dislike-image">
+					<p class="dislike-number">0</p>
+				</div>
+				<div class="comment-reply">
+					<img src="img/reply.svg" alt="user avatar" class="reply-image">
+					<p class="reply-number">Reply</p>
+				</div>
+			</div>
+	
+			<div class="section-edit-delete">
+				<div class="edit-delete">
+					<p class="edit">Edit</p>
+					<p class="delete">Delete</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="comment-wrapper reply">
+		<div class="reply-container">
+			<div class="comment-image">
+				<img class="comment-profile-image" src="img/Rectangle 320.svg" alt="user avatar">
+			</div>
+			<div class="writeup-container">
+				<div class="name-time-options">
+					<div class="name-time">
+						<p class="comment-name">James Emmanuel</p>
+						<p class="comment-time">2h ago</p>
+					</div>
+					<div class="comment-option">
+						<img src="img/Group 15.svg" alt="user avatar" class="comment-options">
+					</div>
+				</div>
+				<div class="comment-write-up">
+					<p class="comment-content">This is so nice to read, I can see the improvement in this sector this is really encouraging.
+						 Kudos !!! 
+					</p>
+				</div>
+				<div class="comment-reactions">
+					<div class="comment-like">
+						<img src="img/upvote.svg" alt="user avatar" class="like-image">
+						<p class="like-number">23</p>
+					</div>
+					<div class="comment-dislike">
+						<img src="img/downvote.svg" alt="user avatar" class="dislike-image">
+						<p class="dislike-number">0</p>
+					</div>
+					<div class="comment-reply">
+						<img src="img/reply.svg" alt="user avatar" class="reply-image">
+						<p class="reply-number">Reply</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="reply-wrapper">
+			<div class="comment-image">
+				<img class="comment-profile-image" src="img/Rectangle 321.svg" alt="user avatar">
+			</div>
+			<div class="comments-reply">
+				<div class="name-time-options">
+					<div class="name-time">
+						<p class="comment-name samll">James Emmanuel</p>
+						<p class="comment-time small">2h ago</p>
+					</div>
+					<div class="comment-option">
+						<img src="img/Group 15.svg" alt="user avatar" class="comment-options-smaller">
+					</div>
+				</div>
+				<div class="comment-write-up">
+					<p class="comment-content small">This is so nice to read, I can see the improvement in this sector this is really encouraging.
+						 Kudos !!! 
+					</p>
+				</div>
+				<div class="comment-reactions">
+					<div class="comment-like">
+						<img src="img/upvote.svg" alt="user avatar" class="like-image">
+						<p class="like-number small">23</p>
+					</div>
+					<div class="comment-dislike">
+						<img src="img/downvote.svg" alt="user avatar" class="dislike-image">
+						<p class="dislike-number small">0</p>
+					</div>
+					<div class="comment-reply">
+						<img src="img/reply.svg" alt="user avatar" class="reply-image">
+						<p class="reply-number small">Reply</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="comment-input">
+		<input type="text" placeholder="Write  a  Comment">
+		<div class="images">
+			<img src="img/smile.svg" alt="user avatar" class="smiley-icon">
+			<img src="img/image.svg" alt="user avatar" class="image-icon">
+		</div>
+	</div>
+</section>
+
+
+<!-- footer -->
+<footer>
+	<div class="main-footer-wrapper">
+		<div class="main-box1">
+			<div class="brand-logo">
+				<img src="img/logo.png"><br>
+			</div>
+			<div class="twitter">
+				<img src="img/twitter-logo.png">
+				<a href="#">@expenseng</a>
+			</div>
+		</div>
+		<div class="main-box2">
+			<div class="box1">
+				<h4>Pages</h4>
+				<a href="index.html">Home</a>
+				<a href="ExpenditureReport.html">Daily Report</a>
+				<a href="ministry_expenditure.html">Ministry Report</a>
+				<a href="companyreport.html">Company Report</a>
+			</div>
+			<div class="box2">
+				<h4>Profiles</h4>
+				<a href="ministry profile.html">Ministry Search</a>
+				<a href="companysearch.html">Company Search</a>
+			</div>
+			<div class="box3">
+				<h4>References</h4>
+				<a href="handlePage.html">Government Handles</a>
+				<a href="group_12_about.html">About Us</a>
+				<a href="contact.html">Contact Us</a>
+			</div>
+		</div>
+	</div>
+	<div class="last-footer">
+		<ul>
+			<li><a href="#">Accessibility |</a></li>
+			<li><a href="#">&nbspPrivacy Policy |</a></li>
+			<li><a href="#">&nbspFreedom of Information Act</a></li>
+			<li class="push">
+				<a href="#">&#169; 2020 EXPENSENG.com</a>
+			</li>
+		</ul>
+	</div>
+</footer>
+   <!-- jquery -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		<!--Scripts for chart-->
+
+		<!-- custom script -->
+
+		<script src="./js/main.js"></script>
+		<script src="./js/ExpenditureScript.js"></script>
+	</body>
+</html>
